@@ -61,5 +61,17 @@ namespace BowlingGameKata
                 (10 + 10 + 0) + (10 + 1 + 1)+(1 + 1) * 8));
         }
 
+        [Test]
+        public void Spear()
+        {
+            List<int> pins = new List<int> 
+            {
+                5,5,   1,1,  1,1,  1,1,  1,1, 
+                1,1,   1,1,  1,1,  1,1,  1,1 
+            };
+
+            Assert.That(Game.GetScore(pins), Is.EqualTo(
+                (5 + 5 + 1) +(1 + 1) * 9));
+        }
     }
 }
