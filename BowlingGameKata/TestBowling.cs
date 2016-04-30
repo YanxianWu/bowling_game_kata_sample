@@ -10,6 +10,7 @@ namespace BowlingGameKata
     [TestFixture]
     public class TestBowling
     {
+
         [Test]
         public void AllZero()
         {
@@ -47,6 +48,18 @@ namespace BowlingGameKata
                 (10 + 1 + 1) + (1 + 1)* 9));
         }
 
+        [Test]
+        public void twoStricke()
+        {
+            List<int> pins = new List<int> 
+            {
+                10,0,  10,0,  1,1,  1,1,  1,1, 
+                1,1,   1,1,  1,1,  1,1,  1,1 
+            };
+
+            Assert.That(Game.GetScore(pins), Is.EqualTo(
+                (10 + 10 + 0) + (10 + 1 + 1)+(1 + 1) * 8));
+        }
 
     }
 }
